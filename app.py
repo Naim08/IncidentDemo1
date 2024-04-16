@@ -20,6 +20,12 @@ def generate_jwt(private_key_path):
     token = jwt.encode(payload, private_key, algorithm="RS256")
     return token
 
+def divide_numbers(num1, num2):
+    if num2 == 0:
+        return "Error: Division by zero is not allowed"
+    else:
+        return num1 / num2
+
 if __name__ == "__main__":
     private_key_path = "./resolvdapp.2024-04-15.private-key.pem"
     jwt_token = generate_jwt(private_key_path)
