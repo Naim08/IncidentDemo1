@@ -31,6 +31,7 @@
 
 
 from fastapi import FastAPI
+import uvicorn
 import sentry_sdk 
 from sentry_sdk.integrations.asgi import SentryAsgiMiddleware
 sentry_sdk.init(
@@ -55,6 +56,10 @@ def read_root():
 @app.get("/error")
 async def trigger_error():
     division_by_zero = 1 / 0
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8003)
 
 # Run the app with `uvicorn app:app --reload` and visit http://
 
