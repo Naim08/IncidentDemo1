@@ -1,0 +1,1 @@
+Failover strategy to another DNS provider to mitigate the impact of the issue with Akamai's DNS service. This does not involve changes to the code, but rather to the network configuration. This solution is based on the analysis of historical data and the details of issue #14.
